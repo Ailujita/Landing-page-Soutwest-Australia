@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Baskervville+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>SW Australia</title>
+    <style>
+      body {
+        background-color: whitesmoke;
+      }
+
+      h1 {
+        font-family: "Allura", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 88px;
+        line-height: 26px;
+        text-align: center;
+        color: white;
+      }
+
+      .top-right-buttons {
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      .top-right-buttons button,
+      .top-left-buttons button {
+        padding: 10px 30px;
+        background-color: #008c95;
+        border-radius: 25px;
+        border: white solid 1px;
+        color: white;
+        font-size: 15px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .top-right-buttons button:hover,
+      .top-left-buttons button:hover {
+        background-color: white;
+        color: #008c95;
+      }
+
+      .top-left-buttons {
+        position: absolute;
+        top: 30px;
+        left: 40px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      .surfmap-button:hover {
+        cursor: url(https://cur.cursors-4u.net/sports/spo-8/spo716.cur), auto !important;
+      }
+
+      img {
+        width: 35px;
+        height: auto;
+      }
+
+      .h2 {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        font-family: "Baskervville SC", serif;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0 200px;
+      }
+      .header-container {
+        width: 100%;
+        background-color: #008c95;
+        padding: 5px;
+        color: white;
+      }
+      .listItem {
+        text-align: center;
+        color: white;
+      }
+
+      .listItem a {
+        text-decoration: none;
+        color: white;
+        transition: all 0.5s ease;
+        position: relative;
+      }
+
+      a:hover {
+        color: rgb(5, 52, 5);
+        transform: scale(1.5);
+      }
+
+      .video-container {
+        width: 100%;
+        padding: 25px;
+        background-color: #a8bfa1;
+      }
+
+      .video {
+        display: block;
+        margin: 50px auto;
+        border-radius: 15px;
+        border: none;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .main-container {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        padding: 40px 0;
+        background-color: rgba(214, 165, 139, 0.7);
+      }
+
+      .info-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 95px;
+        grid-row-gap: 30px;
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        line-height: 20px;
+        font-style: normal;
+        width: 100%;
+        max-width: 900px;
+        text-align: justify;
+      }
+
+      .links {
+        text-decoration: underline;
+        color: black;
+      }
+
+      .info-container div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0;
+      }
+
+      .info-container img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .info-foto {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.5s ease;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+        border: 9px double rgb(255, 111, 97, 0.6);
+        border-radius: 20px;
+      }
+
+      .info-foto:hover {
+        transform: scale(1.1);
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-container">
+      <h1>Southwest Australia</h1>
+      <div class="top-right-buttons">
+        <button class="newsletter-button">Newsletter</button>
+        <button
+          class="skyscanner-button"
+          onclick="window.open('https://www.skyscanner.com', '_blank')"
+        >
+          Skyscanner
+        </button>
+        <button
+          class="booking-button"
+          onclick="window.open('https://www.booking.com/searchresults.de.html?ss=Western+Australia&ssne=Western+Australia&ssne_untouched=Western+Australia&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaDuIAQGYAQe4AQfIAQ3YAQHoAQGIAgGoAgO4As3R6bQGwAIB0gIkZTMxMzllNTAtMGVlNS00YWI1LWFiYTQtZjRiNWJmMzk2OGEz2AIF4AIB&sid=e51687bd0131b7a04ac1c17c8af9ce64&aid=304142&lang=de&sb=1&src_elem=sb&src=searchresults&dest_id=8758&dest_type=district&ac_position=0&ac_click_type=b&ac_langcode=de&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=48555e358bc900cb&ac_meta=GhA0ODU1NWUzNThiYzkwMGNiIAAoATICZGU6F3NvdXRoIFdlc3Rlcm4gQXVzdHJhbGlhQABKAFAA&group_adults=2&no_rooms=1&group_children=0', '_blank')"
+        >
+          Booking.com
+        </button>
+      </div>
+      <div class="top-left-buttons">
+        <button
+          class="weather-button"
+          onclick="window.open('https://www.willyweather.com.au/wa/south-west.html', '_blank')"
+        >
+          Weather
+        </button>
+        <button
+          class="surfmap-button"
+          onclick="window.open('https://surfingmaps.com.au/wa-map/', '_blank')"
+        >
+          Surfing Map
+        </button>
+        <button
+          class="events-button"
+          onclick="window.open('https://www.australiassouthwest.com/events/','_blank')"
+        >
+          Events
+        </button>
+      </div>
+      <h2>
+        <ul class="h2">
+          <li class="listItem">
+            <a href="#perth">Vibrant city Live</a>
+          </li>
+          <li class="listItem">
+            <a href="#food-wine">delicious food and wine</a>
+          </li>
+          <li class="listItem">
+            <a href="#nature">secluded nature</a>
+          </li>
+          <li class="listItem">
+            <a href="#wildlife">diverse wildlife</a>
+          </li>
+          <li class="listItem">
+            <a href="#beaches">breathtaking beaches</a>
+          </li>
+        </ul>
+      </h2>
+    </div>
+    <div class="video-container">
+      <iframe
+        class="video"
+        width="800"
+        height="450"
+        src="https://www.youtube.com/embed/WYrfmgvnsDI?si=IwSwLNNxfhbDIQOA"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div class="main-container">
+      <div class="info-container">
+        <div class="info-text" id="perth">
+          <p>
+            Perth, the sun-soaked capital of Western Australia, is a vibrant
+            city that offers a delightful blend of natural beauty and urban
+            sophistication. Visitors can enjoy pristine beaches like
+            <a
+              href="https://www.beachwalks.com.au/cottesloe-beach.html"
+              class="links"
+              target="_blank"
+              ><strong>Cottesloe</strong></a
+            >
+            and
+            <a
+              href="https://www.beachwalks.com.au/scarborough-beach.html"
+              class="links"
+              target="_blank"
+              ><strong>Scarborough</strong></a
+            >, perfect for swimming and surfing, as well as the lush Kings Park,
+            which boasts stunning views of the city skyline and Swan River. The
+            city's
+            <a
+              href="https://www.destinationperth.com.au/things-to-do/arts-and-culture/"
+              class="links"
+              target="_blank"
+              ><strong>cultural scene</strong></a
+            >
+            is thriving with numerous museums, galleries, and theaters, while
+            its diverse
+            <a
+              href="https://perthisok.com/eat-drink/"
+              class="links"
+              target="_blank"
+              ><strong>culinary landscape</strong></a
+            >offers everything from fresh seafood to innovative fine dining.
+            With its consistently sunny weather, friendly locals, and a plethora
+            of outdoor activities, Perth is an ideal destination for travelers
+            seeking both relaxation and adventure. Learn more about
+            <a
+              href="https://www.destinationperth.com.au/explore-perth/perth-city/"
+              class="links"
+              target="_blank"
+              ><strong>Perth...</strong></a
+            >
+          </p>
+        </div>
+        <div>
+          <img
+            class="info-foto"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/212/original/enriques-school-for-to-bullfighting-32056-2.jpg?1721326756"
+            alt="people in bar"
+          />
+        </div>
+
+        <div>
+          <img
+            class="info-foto"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/217/original/wine_trails.jpg?1721329497"
+            alt="kangaroos in vineyard"
+          />
+        </div>
+        <div id="food-wine" class="info-text">
+          <p>
+            Southwestern Australia is renowned for its
+            <a
+              href="https://www.australiassouthwest.com/eat-and-drink/"
+              class="links"
+              target="_blank"
+              ><strong>delicious food and wine</strong></a
+            >, with numerous wine regions and food trails to explore. Visitors
+            can indulge in fresh local produce, gourmet dining experiences, and
+            award-winning wines. The Margaret River region, in particular, is
+            famous for its vineyards and culinary delights, offering a perfect
+            escape for food and wine enthusiasts. Beyond the well-known
+            <a
+              href="https://www.australiassouthwest.com/listing-types/wineries/"
+              class="links"
+              target="_blank"
+              ><strong>wineries</strong></a
+            >, the region is also celebrated for its artisanal cheese makers,
+            craft breweries, and vibrant farmers' markets. These diverse
+            offerings ensure that every culinary adventure is both unique and
+            memorable, making it a must-visit destination for anyone passionate
+            about fine food and drink.
+          </p>
+        </div>
+
+        <div class="info-text" id="nature">
+          <p>
+            The southwest of Australia is home to stunning
+            <a
+              href="https://www.australiassouthwest.com/forests-and-national-parks/"
+              class="links"
+              target="_blank"
+              ><strong>natural landscapes</strong></a
+            >
+            and secluded spots perfect for nature lovers. From dense forests and
+            rugged coastlines to tranquil rivers and serene national parks,
+            there is no shortage of places to explore and enjoy the beauty of
+            nature. The region's diverse ecosystems offer something for
+            everyone, from lush rainforests and majestic waterfalls to expansive
+            bushlands and pristine beaches. Whether you're hiking through
+            ancient woodlands, kayaking along scenic waterways, or simply taking
+            in the breathtaking views, the southwest provides an array of
+            outdoor adventures and peaceful retreats. This corner of Australia
+            truly embodies the essence of natural wonder and tranquility.
+          </p>
+        </div>
+        <div>
+          <img
+            class="info-foto"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/231/original/bluff_knoll.jpeg?1721335012"
+            alt="nature"
+          />
+        </div>
+
+        <div>
+          <img
+            class="info-foto"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/232/original/quokka_happy_l.jpg?1721335745"
+            alt="Quokka"
+          />
+        </div>
+        <div id="wildlife" class="info-text">
+          <p>
+            Australia's southwest is teeming with diverse
+            <a
+              href="https://www.westernaustralia.com/en/things-to-do/nature-and-wildlife/wildlife-encounters"
+              class="links"
+              target="_blank"
+              ><strong>wildlife</strong></a
+            >, offering opportunities to see unique animals in their natural
+            habitats. From kangaroos and koalas to exotic birds and marine life,
+            wildlife enthusiasts will find plenty to discover in this region.
+            The varied ecosystems, including coastal cliffs, forests, and
+            bushland, provide the perfect setting for a range of species.
+            Visitors might spot playful dolphins, vibrant parrots, and the
+            elusive numbat during their explorations. The region’s protected
+            marine reserves and national parks also offer enriching wildlife
+            experiences, making the southwest a haven for nature lovers and
+            wildlife enthusiasts alike. Each encounter with its unique fauna
+            adds to the magic and allure of this beautiful corner of Australia.
+          </p>
+        </div>
+
+        <div class="info-text" id="beaches">
+          <p>
+            The
+            <a
+              href="https://www.australiassouthwest.com/best-beaches/"
+              class="links"
+              target="_blank"
+              ><strong>beaches</strong></a
+            >
+            in southwest Australia are breathtaking, with pristine sands and
+            crystal-clear waters. Visitors can relax on the beach, swim in the
+            ocean, or enjoy water sports like surfing and snorkeling. Popular
+            destinations include Margaret River, known for its excellent surfing
+            and scenic coastal walks; Albany, with its rugged coastlines and
+            historic sites; and Esperance, famed for its powdery white sand and
+            turquoise waters. These beaches also offer opportunities for whale
+            watching, beachcombing, and exploring vibrant marine life. Whether
+            seeking adventure or tranquility, the southwest’s beaches provide a
+            perfect escape into nature’s splendor.
+          </p>
+        </div>
+        <div>
+          <img
+            class="info-foto"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/241/original/beach.jpeg?1721336070"
+            alt="Torndirrup National Park"
+          />
+        </div>
+      </div>
+    </div>
+    <script>
+      function isValidEmail(mail) {
+        // Basic regex for email validation
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(mail);
+      }
+
+      function registration() {
+        let name = prompt("What's your firstname?").trim();
+        if (!name) {
+          alert(
+            "No name, no fame! Please enter your name so we can make it official."
+          );
+          name = prompt("What's your firstname?");
+        }
+
+        let mail = prompt("Please enter your e-mail address").trim();
+        while (!isValidEmail(mail)) {
+          alert("Please enter a valid e-mail address");
+          mail = prompt("Please enter your e-mail address").trim();
+        }
+        alert(
+          `You’re all set, ${name}! We promise not to send you too many emails—just enough to make you feel like a koala in a eucalyptus forest!`
+        );
+      }
+      let newsletterButton = document.querySelector(".newsletter-button");
+      if (newsletterButton) {
+        newsletterButton.addEventListener("click", registration);
+      }
+    </script>
+  </body>
+</html>
